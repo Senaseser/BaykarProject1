@@ -13,7 +13,7 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
   
   return (
-    <nav className="sticky top-0 left-0 w-full bg-white p-4 h-[70px]">
+    <nav className="sticky top-0 left-0 w-full bg-white p-4 h-[70px] z-50">
         <div className="max-w-7xl mx-auto justify-between items-center hidden md:flex">
     <ul className="flex justify-center space-x-6">
     {["Home", "About", "Listings", "Services", "Blogs"].map((item) => (

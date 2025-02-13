@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#4361EE] bg-opacity-10 text-[#2B2B2B]">
     <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-6 gap-10  ">
-      <div className='col-span-2 justify-items-center'>
+      <div className='col-span-2 justify-items-center md:justify-items-start'>
         <div className="flex items-center space-x-2">
           <div className="bg-[#3a0ba3] text-white p-3 rounded-full">
           <Image
@@ -67,7 +67,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className='col-span-2 justify-items-center'>
+      <div className='col-span-2 justify-items-center md:justify-items-start'>
         <h3 className="text-lg font-medium text-[#0B090A]">Subscribe to our Newsletter!</h3>
         <div className="mt-4 flex items-center relative min-w-72">
           <input
