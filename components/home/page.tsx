@@ -37,7 +37,7 @@ const Home = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className='relative'>
-          <h1 className="text-5xl font-medium mb-4">Find a perfect<br />home you love..!</h1>
+          <h1 className="text-5xl font-medium mb-4 leading-tight">Find a perfect<br />home you love..!</h1>
           <p className="text-[#808080] mb-8 text-base">
             Lorem ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
           </p>
