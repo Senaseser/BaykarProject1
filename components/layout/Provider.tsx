@@ -12,8 +12,10 @@ const Provider = (
 ) => {
   return (
     <>
+    <div className='hidden md:block w-full'>
   <Header/>
-    <div className="relative min-h-screen flex-1 w-full mb-10">
+  </div>
+    <div className="relative min-h-screen flex-1 w-full">
     <Navbar />
     {children}
   </div>

@@ -1,42 +1,34 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+
 import House from "../../assets/house.svg";
 import Profile from "../../assets/profilee.svg";
+import MenuIcon from "../../assets/menu.svg";
 
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+  
   return (
-    <nav className="sticky top-0 left-0 w-full bg-white shadow-md p-4">
-        <div className="max-w-7xl mx-auto  flex justify-between items-center">
+    <nav className="sticky top-0 left-0 w-full bg-white p-4 h-[70px]">
+        <div className="max-w-7xl mx-auto justify-between items-center hidden md:flex">
     <ul className="flex justify-center space-x-6">
-      <li>
-        <Link href="/#home" className="text-black hover:bg-[#4361EE] px-3 hover:opacity-30 hover:px-3 hover:py-2 hover:rounded-[30px]">
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link href="/#about" className="text-black hover:bg-[#4361EE] px-3 hover:opacity-30 hover:px-3 hover:py-2 hover:rounded-[30px]">
-          About
-        </Link>
-      </li>
-      <li>
-      <Link href="/#listings" className="text-black hover:bg-[#4361EE] px-3 hover:bg-opacity-30 hover:px-3 hover:py-2 hover:rounded-[30px]">
-          Listings
-        </Link>
-        </li>
-      <li>
-        <Link href="/#services" className="text-black hover:bg-[#4361EE] px-3 hover:bg-opacity-30 hover:px-3 hover:py-2 hover:rounded-[30px]">
-          Services
-        </Link>
-      </li>
-      <li>
-      <Link href="/#blogs" className="text-black hover:bg-[#4361EE] px-3 hover:bg-opacity-30 hover:px-3 hover:py-2 hover:rounded-[30px]">
-      Blogs
-        </Link>
-      </li>
+    {["Home", "About", "Listings", "Services", "Blogs"].map((item) => (
+            <li key={item} className="text-center md:text-left">
+              <Link
+                href={`/#${item.toLowerCase()}`}
+                className="block text-[#2B2B2B] hover:bg-[#4361EE] hover:bg-opacity-30 px-3 py-2 rounded-[30px]"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
     </ul>
     <div className="flex items-center space-x-2">
-      <div     className="w-10 h-10 bg-purple-700 text-white flex items-center justify-center rounded-full">
+      <div     className="w-10 h-10 bg-[#3a0ba3] text-white flex items-center justify-center rounded-full">
     <Image
             src={House}
             alt="home"
@@ -45,9 +37,9 @@ const Navbar = () => {
        
           />
 </div>
-    <span className="font-bold text-xl">Logo</span>
+    <span className="font-semibold text-xl">Logo</span>
   </div>
-  <div className="flex items-center space-x-4">
+  <div className=" items-center space-x-4 hidden lg:flex">
     <a href="#" className="flex items-center gap-2">
     <Image
             src={Profile}
@@ -57,7 +49,7 @@ const Navbar = () => {
        
           /> Login/Register
     </a>
-    <button className="bg-purple-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+    <button className="bg-[#3a0ba3] text-white px-4 py-2 rounded-full flex items-center gap-2">
     <Image
             src={House}
             alt="home"
@@ -67,6 +59,45 @@ const Navbar = () => {
           /> Add Listing
     </button>
   </div>
+  </div>
+
+
+
+  <div className="flex justify-between items-center md:hidden">
+  <div className="flex items-center space-x-2">
+      <div     className="w-10 h-10 bg-[#3a0ba3] text-white flex items-center justify-center rounded-full">
+    <Image
+            src={House}
+            alt="home"
+            width={20}
+            height={20}
+       
+          />
+</div>
+    <span className="font-semibold text-xl">Logo</span>
+  </div>
+  <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <Image src={MenuIcon} alt="Menu" width={24} height={24} />
+        </button>
+    <ul className={`absolute md:static top-16 left-0 w-full  bg-white  p-4 transition-all duration-300 ${
+            menuOpen ? "block" : "hidden"
+          }`}
+>
+    {["Home", "About", "Listings", "Services", "Blogs"].map((item) => (
+            <li key={item} className="text-center">
+              <Link
+                href={`/#${item.toLowerCase()}`}
+                className="block text-[#2B2B2B] hover:bg-[#4361EE] hover:bg-opacity-30 px-3 py-2 rounded-[30px]"
+                onClick={closeMenu}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+    </ul>
   </div>
   </nav>
   )
