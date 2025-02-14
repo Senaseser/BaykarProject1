@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState,Fragment } from 'react'
 import Image from 'next/image'
 
 import Avatar2 from "../../assets/person.svg"
@@ -123,20 +123,20 @@ const Blogs = () => {
         
             </div>
           </div>
-      
-                <div className="flex flex-col gap-2 h-full justify-items-center">
-                {testimonials.map((_, index) => (
+          <div className="pagination-line mt-14 flex justify-items-center">
+              {testimonials.map((_, index) => (
+                <Fragment key={index}>
                   <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`dot ${
                       index === currentTestimonial 
-                        ? 'bg-[#4361EE] w-4' 
-                        : 'bg-[#D4D4D4]'
+                        ? 'active' 
+                        : 'inactive'
                     }`}
                     onClick={() => setCurrentTestimonial(index)}
                   />
-                ))}
-              </div>
+                </Fragment>
+              ))}
+            </div>
               </div>
         </div>
       </div>

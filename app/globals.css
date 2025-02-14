@@ -66,3 +66,21 @@ html {
   border-bottom: 3px solid #3a0ba3 ;
   width: 120%;
 }
+
+.pagination-line {
+  @apply flex flex-col gap-3 h-full justify-items-center ml-6;
+}
+
+.pagination-line .dot {
+  @apply w-1 h-10 rounded-full cursor-pointer transition-colors duration-300;
+}
+
+.pagination-line .dot.active {
+  @apply bg-[#808080];
+  
+}
+
+.pagination-line .dot.inactive {
+  @apply bg-[#AAA];
+  @apply bg-opacity-50;
+}
