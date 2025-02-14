@@ -77,7 +77,7 @@ const Listings = () => {
         alt="ellipse"
         width={100}
         height={100}
-        className="absolute -bottom-20 right-24 z-40"
+        className="absolute -bottom-20 right-24 z-30"
       />
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">

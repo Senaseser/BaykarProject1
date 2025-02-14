@@ -29,6 +29,7 @@ html {
 
 .swiper-pagination-bullet-active {
   background: #3a0ba3 !important;
+  border: 1px solid white;
 }
 
 .swiper-button-prev,

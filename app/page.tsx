@@ -15,7 +15,9 @@ export default function Dashboard() {
     <Image 
           src={Rectangle}
           alt="Background shape"
-          className="absolute -z-10 "
+          width={1000}
+          height={1000}
+          className="absolute -z-10"
         />
       <Home/>
     </section>
@@ -25,7 +27,7 @@ export default function Dashboard() {
     <section id="listings" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] ">
       <Listings/>
     </section>
-    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] scroll-m-[70px]">
+    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] scroll-m-[70px] w-full">
       <Services/>
     </section>
     <section id="blogs" className="h-auto flex items-center justify-center bg-gray-400 scroll-m-[70px]">
