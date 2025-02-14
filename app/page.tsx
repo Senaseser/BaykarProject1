@@ -22,10 +22,10 @@ export default function Dashboard() {
     <section id="about" className="h-auto flex items-center justify-center bg-white scroll-m-[70px]">
       <About/>
     </section>
-    <section id="listings" className="h-auto flex items-center justify-center bg-gray-300 scroll-m-[70px] ">
+    <section id="listings" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] ">
       <Listings/>
     </section>
-    <section id="services" className="h-auto flex items-center justify-center bg-gray-400 scroll-m-[70px]">
+    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] scroll-m-[70px]">
       <Services/>
     </section>
     <section id="blogs" className="h-auto flex items-center justify-center bg-gray-400 scroll-m-[70px]">

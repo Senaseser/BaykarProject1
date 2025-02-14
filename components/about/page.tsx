@@ -2,7 +2,6 @@
 import React from 'react'
 import Image from 'next/image'
 
-// Import images
 import House1 from "../../assets/image2.svg"
 import House2 from "../../assets/image3.svg"
 import House3 from "../../assets/image4.svg"
