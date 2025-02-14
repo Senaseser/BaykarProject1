@@ -15,22 +15,22 @@ export default function Dashboard() {
     <Image 
           src={Rectangle}
           alt="Background shape"
-          width={1000}
-          height={1000}
-          className="absolute -z-10"
+          width={1200}
+          height={1200}
+          className="absolute -top-16 -z-10"
         />
       <Home/>
     </section>
-    <section id="about" className="h-auto flex items-center justify-center bg-white scroll-m-[70px]">
+    <section id="about" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10">
       <About/>
     </section>
-    <section id="listings" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] ">
+    <section id="listings" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10 ">
       <Listings/>
     </section>
-    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] scroll-m-[70px] w-full">
+    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] z-40 scroll-m-[70px] w-full mb-10">
       <Services/>
     </section>
-    <section id="blogs" className="h-auto flex items-center justify-center bg-gray-400 scroll-m-[70px]">
+    <section id="blogs" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10">
       <Blogs/>
     </section>
   </div>

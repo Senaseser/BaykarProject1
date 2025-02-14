@@ -134,7 +134,7 @@ const Home = () => {
 
         <div className="w-full bg-white p-6 rounded-2xl shadow-lg h-[500px]">
 
-        <div className="flex justify-between items-center mb-[24px] border-b scale-x-110 border-gray-200">
+        <div className="flex justify-between items-center mb-[24px] border-b scale-x-110 border-[#D4D4D4]">
             <div className="tab-pagination flex justify-between items-center gap-12 "></div>
           </div>
           <Swiper
@@ -146,7 +146,7 @@ const Home = () => {
             renderBullet: function (index, className) {
               const texts = ['For Sale', 'For Rent'];
               return `<button class="${className} ${
-                index ===  (activeTab === 'sale' ? 0 : 1)  ? 'text-[#3a0ba3] border-b-2 border-[#3a0ba3] flex justify-between items-center' : 'text-gray-400'
+                index ===  (activeTab === 'sale' ? 0 : 1)  ? 'text-[#3a0ba3] border-b-2 border-[#3a0ba3] flex justify-between items-center leading-tight' : 'text-[#D4D4D4] leading-tight'
               }  px-4">${texts[index]}</button>`;
             },
           }}

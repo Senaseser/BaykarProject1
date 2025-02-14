@@ -71,13 +71,13 @@ const Listings = () => {
 
   return (
  
-    <div className="container mx-auto px-6 md:px-24 py-12 relative">
+    <div className="container mx-auto px-24  w-full h-full relative my-5">
       <Image
         src={Ellipse}
         alt="ellipse"
         width={100}
         height={100}
-        className="absolute -bottom-20 right-24 z-30"
+        className="absolute -bottom-32 right-36 -z-10"
       />
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
