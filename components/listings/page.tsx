@@ -70,8 +70,7 @@ const Listings = () => {
   ]
 
   return (
- 
-    <div className="container mx-auto px-24  w-full h-full relative my-5">
+    <div className="container mx-auto px-24 w-full h-full relative my-5">
       <Image
         src={Ellipse}
         alt="ellipse"
@@ -123,49 +122,55 @@ const Listings = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-        {listings.map((listing) => (
-          <div key={listing.id} className="bg-white overflow-hidden ">
-            <div className="relative aspect-square rounded-[30px] overflow-hidden md:p-0 p-5 max-w-[400px] max-h-[400px]">
-              <Image
-                src={listing.image}
-                alt={listing.title}
-                fill
-                className="object-cover max-w-[400px] max-h-[400px]"
-              />
-              <div className={`flex items-center gap-2 absolute bottom-4 left-4 ${listing.tagColor} px-4 py-1 rounded-full text-xs md:text-sm`}>
-              <Image
-                src={listing.tagIcon}
-                alt=''
-                width={12}
-                height={12}
-               className="w-3 h-3 md:w-4 md:h-4"
-              />{listing.tag}
-              </div>
-            </div>
-
-            <div className="p-4 md:p-6 space-y-3 md:space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-medium">$</span>
-                <span className="text-xl font-medium">{listing.price}</span>
-              </div>
-
-              <h3 className="text-lg md:text-xl font-medium">{listing.title}</h3>
-              <p className="text-[#808080] text-xs md:text-sm">{listing.address}</p>
-
-              <div className="flex items-center gap-4 pt-3 md:pt-4 border-t max-w-[400px] max-h-[400px]">
-                <div className="flex items-center gap-2">
-                  <Image src={BedIcon} alt="bed" width={20} height={20}  className="w-4 h-4 md:w-5 md:h-5"/>
-                  <span className="text-sm md:text-base">{listing.beds} Beds</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={BathIcon} alt="bath" width={20} height={20}  className="w-4 h-4 md:w-5 md:h-5"/>
-                  <span className="text-sm md:text-base">{listing.baths} Bath</span>
+      <div className="relative">
+        <div className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory scrollbar-hide">
+          {listings.map((listing) => (
+            <div 
+              key={listing.id} 
+              className="bg-white flex-none w-[300px] snap-start"
+            >
+              <div className="relative aspect-square rounded-[30px] overflow-hidden">
+                <Image
+                  src={listing.image}
+                  alt={listing.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className={`flex items-center gap-2 absolute bottom-4 left-4 ${listing.tagColor} px-4 py-1 rounded-full text-sm`}>
+                  <Image
+                    src={listing.tagIcon}
+                    alt=''
+                    width={12}
+                    height={12}
+                    className="w-4 h-4"
+                  />
+                  {listing.tag}
                 </div>
               </div>
+
+              <div className="py-6 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-medium">$</span>
+                  <span className="text-lg font-medium">{listing.price}</span>
+                </div>
+
+                <h3 className="text-xl font-medium">{listing.title}</h3>
+                <p className="text-[#808080] text-sm">{listing.address}</p>
+
+                <div className="flex items-center gap-4 pt-4 border-t">
+                  <div className="flex items-center gap-2">
+                    <Image src={BedIcon} alt="bed" width={20} height={20} className="w-5 h-5"/>
+                    <span className="text-base">{listing.beds} Beds</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={BathIcon} alt="bath" width={20} height={20} className="w-5 h-5"/>
+                    <span className="text-base">{listing.baths} Bath</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
