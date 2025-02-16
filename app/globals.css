@@ -23,13 +23,16 @@ html {
   width: 80px !important;
   height: 4px !important;
   border-radius: 2px !important;
-  background: #fff !important;
+  background: #dce1ef !important;
   opacity: 1 !important;
 }
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 15px !important;
+  }
 
 .swiper-pagination-bullet-active {
-  background: #3a0ba3 !important;
-  border: 1px solid white;
+  background: #4361ed !important;
 }
 
 .swiper-button-prev,
@@ -84,3 +87,4 @@ html {
   @apply bg-[#AAA];
   @apply bg-opacity-50;
 }
+

@@ -16,7 +16,7 @@ import Search from "../../assets/search.svg"
 import Settings from "../../assets/settings.svg"
 import Ellipse1 from "../../assets/ellipse1.svg"
 import Ellipse2 from "../../assets/ellipse2.svg"
-
+import Down from "../../assets/down.svg"
 
 
 const Home = () => {
@@ -42,7 +42,7 @@ const Home = () => {
             Lorem ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
           </p>
 
-          <div className="relative ">
+          <div className="relative overflow-visible">
           <Image
                 src={Ellipse1}
                 alt="ellipse"
@@ -63,10 +63,10 @@ const Home = () => {
               return '<span class="' + className + ' bg-[#3a0ba3]"></span>';
             },
           }}
-          className="h-full rounded-2xl pb-10"
+          className="h-full rounded-2xl pb-10 "
           >
         <SwiperSlide className="aspect-[16/9]">
-        <div className="relative w-full h-0 pb-[56.25%]">
+        <div className=" w-full h-0 pb-[56.25%]">
               <Image
                 src={Image1}
                 alt="Luxury Room"
@@ -77,40 +77,40 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className="aspect-[16/9]">
-            <div className="relative w-full h-0 pb-[56.25%]">
+            <div className=" w-full h-0 pb-[56.25%]">
               <Image
                 src={Image1}
                 alt="Luxury Room"
                 fill
                 style={{ objectFit: 'cover' }}
-                className="rounded-2xl"
+                className="rounded-2xl "
               />
               </div>
             </SwiperSlide>
             <SwiperSlide className="aspect-[16/9]">
-            <div className="relative w-full h-0 pb-[56.25%]">
+            <div className=" w-full h-0 pb-[56.25%]">
               <Image
                 src={Image1}
                 alt="Luxury Room"
                 fill
                 style={{ objectFit: 'cover' }}
-                className="rounded-2xl"
+                className="rounded-2xl "
               />
               </div>
             </SwiperSlide>
             <SwiperSlide className="aspect-[16/9]">
-            <div className="relative w-full h-0 pb-[56.25%]">
+            <div className=" w-full h-0 pb-[56.25%]">
               <Image
                 src={Image1}
                 alt="Luxury Room"
                 fill
                 style={{ objectFit: 'cover' }}
-                className="rounded-2xl"
+                className="rounded-2xl "
               />
               </div>
             </SwiperSlide>
             
-            <button className="swiper-button-prev absolute left-4 top-1/2 bg-white p-2 rounded-full shadow-lg z-10">
+            <button className="swiper-button-prev absolute !left-0 !top-[45%] bg-white p-2 rounded-full shadow-lg !z-30">
             <Image
        src={Vector}
               alt="vector"
@@ -119,7 +119,7 @@ const Home = () => {
               className='rotate-180'
             />
             </button>
-            <button className="swiper-button-next absolute right-4 top-1/2 bg-white p-2 rounded-full shadow-lg z-10">
+            <button className="swiper-button-next absolute !right-4 !top-[45%] bg-white p-2 rounded-full shadow-lg z-30">
             <Image
               src={Vector}
               alt="vector"
@@ -128,7 +128,7 @@ const Home = () => {
             />
             </button>
             
-            <div className="swiper-pagination absolute -bottom-12 w-full z-40 flex justify-center gap-3"></div>
+            <div className="swiper-pagination absolute -bottom-12 left-0 w-full z-30 flex justify-center gap-3"></div>
           </Swiper>
           </div> </div>
 
@@ -157,23 +157,38 @@ const Home = () => {
               <input
                 type="text"
                 placeholder="New York, San Francisco, etc"
-                className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50"
+                className="w-[95%] mx-1 p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50"
               />
               
-              <select className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50">
+              <select className="w-[95%] mx-1 p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50 appearance-none relative">
                 <option>Select Property Type</option>
+ 
               </select>
+              <Image
+    src={Down}
+    alt="dropdown"
+    width={12}
+    height={12}
+    className="absolute right-9 top-[29%] transform -translate-y-1/2"
+  />
 
-              <select className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50">
+              <select className="w-[95%] mx-1 p-3  border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50 appearance-none relative">
                 <option>Price Range</option>
               </select>
+              <Image
+    src={Down}
+    alt="dropdown"
+    width={12}
+    height={12}
+    className="absolute right-9 top-[51%] transform -translate-y-1/2"
+  />
 
               <button className="flex items-center gap-2 text-[#3a0ba3] text-sm">
             <Image
               src={Settings}
               alt="settings"
-              width={10}
-              height={10}
+              width={15}
+              height={15}
             />
               <span>Advance Search</span>
             </button>
@@ -191,28 +206,43 @@ const Home = () => {
             </div>
           </SwiperSlide>
 
-        <SwiperSlide>
+          <SwiperSlide>
             <div className="space-y-6 mt-6">
               <input
                 type="text"
                 placeholder="New York, San Francisco, etc"
-                className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50"
+                className="w-[95%] mx-1 p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50"
               />
               
-              <select className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50">
+              <select className="w-[95%] mx-1 p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50 appearance-none relative">
                 <option>Select Property Type</option>
+ 
               </select>
+              <Image
+    src={Down}
+    alt="dropdown"
+    width={12}
+    height={12}
+    className="absolute right-9 top-[29%] transform -translate-y-1/2"
+  />
 
-              <select className="w-full p-3 border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50">
+              <select className="w-[95%] mx-1 p-3  border rounded-full bg-[#D4D4D4] bg-opacity-20 border-none text-[#6D6A75] text-opacity-50 appearance-none relative">
                 <option>Price Range</option>
               </select>
+              <Image
+    src={Down}
+    alt="dropdown"
+    width={12}
+    height={12}
+    className="absolute right-9 top-[51%] transform -translate-y-1/2"
+  />
 
               <button className="flex items-center gap-2 text-[#3a0ba3] text-sm">
             <Image
               src={Settings}
               alt="settings"
-              width={10}
-              height={10}
+              width={15}
+              height={15}
             />
               <span>Advance Search</span>
             </button>
