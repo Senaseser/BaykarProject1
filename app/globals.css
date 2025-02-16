@@ -63,11 +63,20 @@ html {
   border-radius: 0 !important;
   padding-bottom: 24px;
 }
-
 .tab-pagination .swiper-pagination-bullet-active {
-  background: transparent !important;
-  border-bottom: 3px solid #3a0ba3 ;
-  width: 120%;
+  position: relative;
+}
+
+.tab-pagination .swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 170%;
+  height: 3px;
+  background: #3a0ba3;
+  border-radius: 2px;
+  transform: translateX(-20%);
 }
 
 .pagination-line {
