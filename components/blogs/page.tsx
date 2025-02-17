@@ -46,10 +46,10 @@ const Blogs = () => {
   }
 
   return (
-    <div className="container mx-auto px-24  w-full h-full relative my-14">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+    <div className="container mx-auto px-8 md:px-12 lg:px-24  w-full h-full relative my-14">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-        <div className="md:w-1/2">
+        <div className="lg:w-1/2">
           <h3 className="text-[#4361EE] text-sm md:text-base font-medium mb-4">
             TESTIMONIALS
           </h3>
@@ -59,7 +59,7 @@ const Blogs = () => {
           <p className="text-[#2B2B2B] mb-8">
             Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.
           </p>
-          <div className="flex gap-6">
+          <div className=" gap-6 hidden lg:flex">
             <button 
               onClick={handlePrev}
               className="w-10 h-10 rounded-full border border-[#4361EE] flex items-center justify-center text-[#4361EE] hover:bg-[#4361EE] hover:text-white transition-colors"
@@ -75,16 +75,16 @@ const Blogs = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 relative min-h-[282px]">
+        <div className="lg:w-1/2 relative min-h-[282px] p-6">
           <Image
             src={Ellipse}
             alt="ellipse"
             width={60}
             height={60}
-            className="absolute -top-7 -left-5 z-30 -rotate-90"
+            className="absolute -top-1 lg:-left-2 right-32 z-30 -rotate-90"
           />
-          <div className='flex justify-items-center gap-3 '>
-          <div className="bg-white rounded-[30px] p-8 shadow-lg relative z-40">
+          <div className='flex justify-items-center gap-3 w-[80%] mx-auto'>
+          <div className="bg-white rounded-[30px] p-8 shadow-lg relative z-40 ">
             <div className="text-6xl text-[#2B2B2B] font-serif absolute top-6 left-4">
               <Image 
                 src={Quotation}
@@ -123,7 +123,8 @@ const Blogs = () => {
         
             </div>
           </div>
-          <div className="pagination-line mt-14 flex justify-items-center">
+          <div className='lg:flex hidden'>
+          <div className="pagination-line mt-14  justify-items-center ">
               {testimonials.map((_, index) => (
                 <Fragment key={index}>
                   <div
@@ -137,7 +138,22 @@ const Blogs = () => {
                 </Fragment>
               ))}
             </div>
-              </div>
+            </div>
+          </div>
+          <div className="pagination-row mt-6 !ml-0 w-full flex justify-center items-center lg:hidden">
+              {testimonials.map((_, index) => (
+                <Fragment key={index}>
+                  <div
+                    className={`dot ${
+                      index === currentTestimonial 
+                        ? 'active' 
+                        : 'inactive'
+                    }`}
+                    onClick={() => setCurrentTestimonial(index)}
+                  />
+                </Fragment>
+              ))}
+            </div>
         </div>
       </div>
     </div>

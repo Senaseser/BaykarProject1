@@ -97,6 +97,23 @@ html {
   @apply bg-[#AAA];
   @apply bg-opacity-50;
 }
+.pagination-row {
+  @apply flex gap-3 h-full justify-items-center ml-6;
+}
+
+.pagination-row .dot {
+  @apply w-10 h-1 rounded-full cursor-pointer transition-colors duration-300;
+}
+
+.pagination-row .dot.active {
+  @apply bg-[#808080];
+  
+}
+
+.pagination-row .dot.inactive {
+  @apply bg-[#AAA];
+  @apply bg-opacity-50;
+}
 
 .services-swiper {
   padding-bottom: 70px !important;

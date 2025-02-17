@@ -23,14 +23,14 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState('sale');
 
   return (
-    <div className="container mx-auto px-4 md:px-12 lg:px-24 w-full h-full relative ">
+    <div className="container mx-auto px-8 md:px-12 lg:px-24 w-full h-full relative ">
       <div className="my-4 mt-12 ">
       <Image
                 src={Ellipse2}
                 alt="ellipse"
                width={90}
                height={90}
-               className='absolute -bottom-10 -left-12 z-100'
+               className='absolute -bottom-10 -left-12 z-100 hidden lg:block'
               />
         <span className="text-[#3a0ba3] font-medium">REAL ESTATE</span>
       </div>

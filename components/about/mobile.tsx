@@ -11,7 +11,7 @@ import Ellipse from "../../assets/ellipse3.svg"
 
 const About = () => {
   return (
-    <div className="container mx-auto px-24 w-full h-full relative my-10">
+ <div className="container mx-auto px-8 md:px-12 w-full h-full relative my-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-6">
           <span className="text-[#3a0ba3] font-medium">WHO ARE WE</span>

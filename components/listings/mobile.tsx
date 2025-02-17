@@ -67,16 +67,16 @@ const ListingsMobile = () => {
   ]
 
   return (
-    <div className="container mx-auto px-24 w-full h-full relative my-5">
-      <div className="space-y-2 mb-6">
-        <span className="text-[#3a0ba3] text-xs font-medium">CHECKOUT OUR NEW</span>
-        <h2 className="text-xl font-semibold">Latest Listed Properties</h2>
-        <p className="text-[#808080] text-xs">
-          Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
-        </p>
-      </div>
+    <div className="container mx-auto px-8 md:px-12  w-full h-full relative my-5">
+        <div className="space-y-4 mb-6 md:mb-0">
+          <span className="text-[#3a0ba3] font-medium">CHECKOUT OUR NEW</span>
+          <h2 className="text-4xl font-medium">Latest Listed Properties</h2>
+          <p className="text-[#808080]">
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+          </p>
+        </div>
 
-      <div className="flex gap-2 mb-6">
+      <div className="flex gap-2 my-6 justify-center items-center">
         <button 
           onClick={() => setActiveFilter('all')}
           className={`px-6 py-2 rounded-full text-sm border ${
@@ -109,11 +109,11 @@ const ListingsMobile = () => {
         </button>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-8 w-[80%] mx-auto">
         {listings.map((listing) => (
           <div key={listing.id} className="space-y-2">
             <div className="relative rounded-2xl overflow-hidden">
-              <div className="aspect-[3/2] relative max-h-[440px]">
+              <div className="aspect-[672/440] relative max-h-[440px]">
                 <Image
                   src={listing.image}
                   alt={listing.title}
@@ -155,7 +155,7 @@ const ListingsMobile = () => {
         ))}
       </div>
 
-      <button className="w-[60%] flex justify-center  items-center mx-auto mt-6 py-2.5 text-[#3a0ba3] text-sm font-medium border border-[#3a0ba3] rounded-full">
+      <button className="w-[50%] flex justify-center  items-center mx-auto mt-6 py-2.5 text-[#3a0ba3] text-sm font-medium border border-[#3a0ba3] rounded-full">
         View more properties
       </button>
     </div>

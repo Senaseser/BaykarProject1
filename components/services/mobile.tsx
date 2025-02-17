@@ -32,13 +32,13 @@ const ServicesMobile = () => {
   ]
 
   return (
-    <div className="container mx-auto px-4 w-full h-full relative my-14 z-40">
+    <div className="container mx-auto md:px-12 w-full h-full relative my-14 z-40">
       <div className="text-center mb-8 text-white">
         <span className="text-sm font-medium mb-2 block">WHATS TRENDING</span>
         <h2 className="text-2xl font-medium">Latest Blogs & Posts</h2>
       </div>
 
-      <div className="flex flex-col lg:gap-6 gap-3">
+      <div className="flex flex-col lg:gap-6 gap-3 w-[80%] mx-auto">
         {blogs.map((blog) => (
           <div key={blog.id} className="overflow-hidden w-full rounded-2xl">
             <div className="relative aspect-[3/2] w-full max-w-[600px]">
@@ -61,11 +61,12 @@ const ServicesMobile = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      <button className="flex justify-start items-start bg-white text-[#3a0ba3] font-medium py-3 px-12 rounded-full mt-8 mx-9">
+          <button className="!mx-0 flex justify-center items-center bg-white text-[#3a0ba3] font-medium py-3 px-6 rounded-full mt-8 w-[50%] !ml-7 ">
         View more blogs
       </button>
+      </div>
+
+    
     </div>
   )
 }
