@@ -148,10 +148,10 @@ const Listings = () => {
                 </div>
               </div>
 
-              <div className="py-6 space-y-4">
+              <div className="py-6 space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-medium">$</span>
-                  <span className="text-lg font-medium">{listing.price}</span>
+                  <span className="text-2xl font-semibold">$</span>
+                  <span className="text-2xl font-semibold">{listing.price}</span>
                 </div>
 
                 <h3 className="text-xl font-medium">{listing.title}</h3>
@@ -159,12 +159,12 @@ const Listings = () => {
 
                 <div className="flex items-center gap-4 pt-4 border-t">
                   <div className="flex items-center gap-2">
-                    <Image src={BedIcon} alt="bed" width={20} height={20} className="w-5 h-5"/>
-                    <span className="text-base">{listing.beds} Beds</span>
+                    <Image src={BedIcon} alt="bed" width={20} height={20} className="w-4 h-4"/>
+                    <span className="text-sm">{listing.beds} Beds</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Image src={BathIcon} alt="bath" width={20} height={20} className="w-5 h-5"/>
-                    <span className="text-base">{listing.baths} Bath</span>
+                    <Image src={BathIcon} alt="bath" width={20} height={20} className="w-4 h-4"/>
+                    <span className="text-sm">{listing.baths} Bath</span>
                   </div>
                 </div>
               </div>
