@@ -21,14 +21,14 @@ export default function Dashboard() {
           alt="Background shape"
           width={1200}
           height={1200}
-          className="absolute -top-16 -z-10 md:block hidden"
+          className="absolute -top-16 -z-10 lg:block hidden"
         />
           <Image 
           src={Rectangle2}
           alt="Background shape"
           width={1200}
           height={1200}
-          className="absolute -top-16 -z-10 md:hidden block"
+          className="absolute -top-16 -z-10 lg:hidden block"
         />
       <Home/>
     </section>
@@ -38,16 +38,16 @@ export default function Dashboard() {
     <section id="about" className=" lg:hidden h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10">
      <AboutMobile/>
     </section>
-    <section id="listings" className="md:flex hidden h-auto items-center justify-center bg-white scroll-m-[70px] mb-10 ">
+    <section id="listings" className="lg:flex hidden h-auto items-center justify-center bg-white scroll-m-[70px] mb-10 ">
       <Listings/>
     </section>
-    <section id="listings" className="md:hidden h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10 ">
+    <section id="listings" className="lg:hidden h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10 ">
       <ListingsMobile/>
     </section>
-    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] z-40 scroll-m-[70px] w-full mb-10">
+    <section id="services" className="lg:flex hidden h-auto items-center justify-center bg-[#3a0ba3] z-40 scroll-m-[70px] w-full mb-10">
       <Services/>
     </section>
-    <section id="services" className="h-auto flex items-center justify-center bg-[#3a0ba3] z-40 scroll-m-[70px] w-full mb-10">
+    <section id="services" className="lg:hidden h-auto flex items-center justify-center bg-[#3a0ba3] z-40 scroll-m-[70px] w-full mb-10">
       <ServicesMobile/>
     </section>
     <section id="blogs" className="h-auto flex items-center justify-center bg-white scroll-m-[70px] mb-10">

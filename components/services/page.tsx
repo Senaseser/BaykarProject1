@@ -37,14 +37,14 @@ const Services = () => {
     },
     {
       id: 4,
-      image: Blog2,
+      image: Blog1,
       date: { day: "08", weekday: "Mon" },
       title: "How to Stage Your Home for a Quick Sale",
       description: "Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc."
     },
     {
       id: 5,
-      image: Blog3,
+      image: Blog2,
       date: { day: "26", weekday: "Wed" },
       title: "5 Tips for First-Time Home Sellers",
       description: "In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus."
@@ -63,7 +63,7 @@ const Services = () => {
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={24}
-          slidesPerView={1}
+          slidesPerView={3}
           navigation={{
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -72,36 +72,29 @@ const Services = () => {
             el: '.swiper-pagination',
             clickable: true,
           }}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="relative"
+      
+          className="services-swiper relative"
         >
           {blogs.map((blog) => (
             <SwiperSlide key={blog.id}>
-              <div className=" overflow-hidden max-w-[350px]">
+              <div className=" overflow-hidden max-w-[400px]">
 
-                <div className="relative aspect-[4/3] max-w-[350px]">
+                <div className="relative aspect-[4/3] max-w-[400px]">
                   <Image
                     src={blog.image}
                     alt={blog.title}
                     fill
-                    className="object-cover flex justify-items-center"
+                    className="object-cover "
                   />
   
-                  <div className="absolute top-4 left-12 bg-white rounded-b-2xl p-1 text-center min-w-[60px]">
+                  <div className="absolute top-[10px] xl:top-[14px] left-12 bg-white rounded-b-2xl p-1 text-center min-w-[60px]">
                     <div className="text-md text-[#2B2B2B] font-semibold">{blog.date.day}</div>
                     <div className="text-sm font-extralight text-[#2B2B2B]">{blog.date.weekday}</div>
                   </div>
                 </div>
                 
 
-                <div className="p-2">
+                <div className="py-2 px-5">
                   <h3 className="text-white text-xl font-medium mb-3">{blog.title}</h3>
                   <p className="text-white text-sm">{blog.description}</p>
                 </div>
@@ -109,13 +102,13 @@ const Services = () => {
             </SwiperSlide>
           ))}
 
-          <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-lg z-10">
+          <button className="swiper-button-prev absolute bg-white rounded-full p-4 shadow-lg z-10 ">
             <span className="sr-only">Previous</span>
-            ←
+            <div className="text-[#3a0ba3] font-bold">←</div>
           </button>
-          <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-lg z-10">
+          <button className="swiper-button-next absolute bg-white rounded-full p-4 shadow-lg z-10">
             <span className="sr-only">Next</span>
-            →
+            <div className="text-[#3a0ba3] font-bold">→</div>
           </button>
 
           <div className="swiper-pagination flex justify-center gap-2 mt-9"></div>

@@ -24,15 +24,16 @@ html {
   height: 4px !important;
   border-radius: 2px !important;
   background: #dce1ef !important;
-  opacity: 1 !important;
+  opacity: 0.8 !important;
 }
 .swiper-pagination {
   position: relative !important;
-  margin-top: 15px !important;
+  margin-top: 20px !important;
   }
 
 .swiper-pagination-bullet-active {
   background: #4361ed !important;
+  opacity: 1 !important;
 }
 
 .swiper-button-prev,
@@ -96,4 +97,41 @@ html {
   @apply bg-[#AAA];
   @apply bg-opacity-50;
 }
+
+.services-swiper {
+  padding-bottom: 70px !important;
+}
+
+.services-swiper .swiper-button-prev,
+.services-swiper .swiper-button-next {
+  top: auto !important;
+  bottom: 42px !important;
+  transform: none !important;
+
+}
+
+.services-swiper .swiper-button-prev {
+  left: 32% !important;
+}
+
+.services-swiper .swiper-button-next {
+  right: 32% !important;
+}
+
+.services-swiper .swiper-pagination {
+  bottom: -55px !important;
+}
+.services-swiper .swiper-pagination-bullet {
+  width: 80px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #fff !important;
+  opacity: 0.5 !important;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  background: #fff !important;
+  opacity: 1 !important;
+}
+
 
