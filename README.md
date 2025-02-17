@@ -2,8 +2,6 @@
 
 A modern, responsive real estate platform built with Next.js and Tailwind CSS, featuring an elegant UI design and smooth user experience.
 
-![Real Estate Platform Preview](preview.png)
-
 ## ✨ Features
 
 - **Responsive Design**: Seamlessly adapts to all screen sizes (mobile, tablet, and desktop)
@@ -71,10 +69,9 @@ Open your terminal and run this commands:
 
 ## 🏗️ Project Structure
 **├── components/**  
-**├── types/** 
+**├── types/**  
 **├── assets/**  
 **├── public/**  
-**├── styles/**  
 └── ...
 
 `components/:` Reusable components of the application.
